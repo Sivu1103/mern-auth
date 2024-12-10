@@ -1,13 +1,12 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-//import userRoutes from './routes/user.route.js';
+import userRoutes from './routes/user.route.js';
 //import authRoutes from './routes/auth.route.js';
 //import cookieParser from 'cookie-parser';
 //import path from 'path';
 dotenv.config();
 
-mongoose.connect("mongodb+srv://sivu:sivu@mern.2fuwx.mongodb.net/?retryWrites=true&w=majority&appName=mern")
 mongoose
   .connect(process.env.MONGO)
   .then(() => {
@@ -35,7 +34,7 @@ app.listen(3000, () => {
   console.log('Server listening on port 3000!');
 });
 
-//app.use('/api/user', userRoutes);
+app.use('/api/user', userRoutes);
 //app.use('/api/auth', authRoutes);
 
 /*app.use((err, req, res, next) => {
