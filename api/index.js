@@ -1,20 +1,21 @@
 import express from 'express';
-//import mongoose from 'mongoose';
-//import dotenv from 'dotenv';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 //import userRoutes from './routes/user.route.js';
 //import authRoutes from './routes/auth.route.js';
 //import cookieParser from 'cookie-parser';
 //import path from 'path';
-//dotenv.config();
+dotenv.config();
 
-/*mongoose
+mongoose.connect("mongodb+srv://sivu:sivu@mern.2fuwx.mongodb.net/?retryWrites=true&w=majority&appName=mern")
+mongoose
   .connect(process.env.MONGO)
   .then(() => {
     console.log('Connected to MongoDB');
   })
   .catch((err) => {
     console.log(err);
-  });*/
+  });
 
 //const __dirname = path.resolve();
 
