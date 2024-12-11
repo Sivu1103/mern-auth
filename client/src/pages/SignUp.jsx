@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 //import OAuth from '../components/OAuth';
 
 export default function SignUp() {
@@ -30,7 +30,7 @@ export default function SignUp() {
         setError(true);
         return;
       }
-      //navigate('/sign-in');
+      navigate('/sign-in');
     } catch (error) {
       setLoading(false);
       setError(true);
